@@ -1,0 +1,68 @@
+<html>
+    <head>
+        <title>ITunes</title>
+    </head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
+    <link rel ="stylesheet" href="style.css">
+    <body>
+        <div class="main">
+            <div class="side-menu">
+                <img src="https://image.shutterstock.com/image-vector/vector-cartoon-music-note-icon-600w-1165584241.jpg" id="logo" alt="logo">
+                <h1>ITunes</h1>
+                <button id="dark-mode"><i class="fas fa-moon"></i></button>
+
+                <ul>
+                    <hr>
+                        <li><h3>All Songs</h3></li>
+                    <hr>
+                        <li><h3>Favourites</h3></li>
+                    <hr>
+                        <li><h3>Recently added</h3></li>
+                    <hr>
+                </ul>
+            </div>
+            <div class="music-cont">
+                <div class="search-bar">
+                    <input type="text" placeholder="Search"> 
+                </div>
+                <div class="playlist">
+                    playlist table
+                    <table>
+                        <tr>
+                            <th>Song </th>
+                            <th>Artist</th>
+                        </tr>
+                        <tr>
+                            <td>G.O.A.T.</td>
+                            <td>Diljit Dosanjh</td>
+                        </tr>
+                        <tr>
+                            <td>Punjaab</td>
+                            <td>Sidhu Mooseala</td>
+                        </tr>
+                        <tr>
+                            <td>Dhakka</td>
+                            <td>Sidhu Mooseala</td>
+                        </tr>
+                    </table>
+                </div>
+                <audio id="current-song" src="http://p3201.ve.vc/data/320/48617/296070/G.O.A.T%20-%20Diljit%20Dosanjh%20(DjPunjab.Com).mp3"></audio>
+                <div class="player">
+                    <button id="previous"><i class="fas fa-backward"></i></button>
+                    <button id="play" onclick="playSong()" class=""><i class="fas fa-play-circle"></i></button>
+                    <button id="pause"onclick="pauseSong()" class="not-active"><i class="fas fa-pause-circle"></i></button>
+                    <button id="next"><i class="fas fa-forward"></i></button>
+                    
+                    <p id="start-time">00:00</p>
+                    <input type="range" min="0"  max="100" step="1" value="0" onclick="updateTime()" id="audio-time">
+                    <p id="end-time">00:00</p>
+                    <button id="favourite" onclick="addToFav()" class=""><i class="fas fa-heart"></i></button>
+                    <i class="fas fa-volume-down"></i>
+                    <input type="range" min="0" max="10"  id="volume-slider">
+                    <i class="fas fa-volume-up"></i>
+                </div>
+            </div>
+        </div>
+    </body>
+    <script src ="script.js"></script>
+</html>
